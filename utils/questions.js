@@ -6,7 +6,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please write a short \x1b[36mdescription \x1b[0mfor this project",
+    message:
+      "Please write a short \x1b[36mdescription \x1b[0mfor this project?",
     name: "description",
   },
   {
@@ -23,38 +24,38 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please describe the \x1b[36minstallation \x1b[0mmethod",
+    message: "Please describe the \x1b[36minstallation \x1b[0mmethod!",
     name: "installation",
   },
   {
     type: "input",
-    message: "Please describe the \x1b[36musage\x1b[0m",
+    message: "Please describe the \x1b[36musage\x1b[0m of this app!",
     name: "usage",
   },
   {
     type: "input",
-    message: "Please describe the \x1b[36mcredit\x1b[0m",
+    message: "Who to give \x1b[36mcredit\x1b[0m to?",
     name: "credit",
   },
   {
     type: "input",
-    message: "Please describe the \x1b[36mfeatures\x1b[0m",
+    message: "Please describe the \x1b[36mfeatures\x1b[0m!",
     name: "features",
   },
   {
     type: "input",
     message:
-      "Please describe how to \x1b[36mmake contribution \x1b[0mto this project",
+      "Please describe how to \x1b[36mmake contribution \x1b[0mto this project!",
     name: "howToContribute",
   },
   {
     type: "input",
-    message: "Please describe the \x1b[36mtest\x1b[0m",
+    message: "Please describe the \x1b[36mtest\x1b[0m!",
     name: "test",
   },
   {
     type: "input",
-    message: "Is there any remaining \x1b[36mquestions\x1b[0m",
+    message: "Is there any remaining \x1b[36mquestions\x1b[0m!",
     name: "question",
   },
   {
