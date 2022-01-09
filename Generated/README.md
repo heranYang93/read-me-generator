@@ -1,33 +1,43 @@
-# Blah
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
----
+# A title
+
+## [![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
+
 ## Description
-Blorp
----
+
+## A description
+
 ## Table of Content
+
 - [Installation](## Installation)
 - [Usage](## Usage)
 - [Credit](## Credit)
-- ## How to Contribute
+- [Features](## Features)
 - [Contribution](## How to Contribute)
 - [Test](## Test)
 
 ---
+
 ## Installation
-installation
----
+
+## Installation
+
 ## Usage
-usage
----
+
+## Usage
+
 ## Features
-features
----
+
+## Features
+
 ## How to Contribute
-Make contribution
----
+
+## Make Contribution
+
 ## Test
-test
----
+
+## test
+
 ## Questions?
+
 For further questions or queries, please reach out to me at
-[heranyang93](mailto:yang.hrn@gmail.com?subject=Query%20regarding%20Project-Blah)
+[heranyang93](mailto:yang.hrn@gmail.com?subject=Query%20regarding%20Project-A title)
