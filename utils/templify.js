@@ -20,26 +20,26 @@ class Templify {
   tableOfContentGen() {
     let tableOfContent = "";
     if (this.tableOfContent) {
-      tableOfContent = "## Table of Content\n";
+      tableOfContent = "# Table of Content\n";
       if (this.installation !== "") {
-        tableOfContent += "- [Installation](##Installation)\n";
+        tableOfContent += "- [Installation](#installation)\n";
       }
       if (this.usage !== "") {
-        tableOfContent += "- [Usage](##Usage)\n";
+        tableOfContent += "- [Usage](#usage)\n";
       }
       if (this.credit !== "") {
-        tableOfContent += "- [Credit](##Credit)\n";
+        tableOfContent += "- [Credit](#credit)\n";
       }
       if (this.features !== "") {
-        tableOfContent += "- [Features](##Features)\n";
+        tableOfContent += "- [Features](#features)\n";
       }
       if (this.howToContribute !== "") {
-        tableOfContent += "- [Contribution](##Contribute)\n";
+        tableOfContent += "- [Contribution](#contribute)\n";
       }
       if (this.test !== "") {
-        tableOfContent += "- [Test](##Test)\n";
+        tableOfContent += "- [Test](#test)\n";
       }
-      tableOfContent += "- [Questions and Queries](##Questions)\n";
+      tableOfContent += "- [Questions and Queries](#questions)\n";
     }
     this.table = tableOfContent;
   }
@@ -59,22 +59,22 @@ class Templify {
   }
 
   contentGen() {
-    let readMeMainContentTemplate = `#${this.title}\n
+    let readMeMainContentTemplate = `# ${this.title}\n
 ${this.licenseSection}\n
-##Description\n
+## Description<div id="description" />\n
 ${this.description}\n
 ${this.table}\n
-##Installation\n
+## Installation<div id="installation" />\n
 ${this.installation}\n
-##Usage\n
+## Usage<div id="usage" />\n
 ${this.usage}\n
-##Features\n
+## Features<div id="features" />\n
 ${this.features}\n
-##Contribute\n
+## Contribute<div id="contribute" />\n
 ${this.howToContribute}\n
-##Test\n
+## Test<div id="test" />\n
 ${this.test}\n
-##Questions\n
+## Questions<div id="questions" />\n
 For further questions or queries, please reach out to me at
 [${this.username}](mailto:${this.mail}?subject=Query%20regarding%20Project-${this.title})`;
     this.allIn = readMeMainContentTemplate;
