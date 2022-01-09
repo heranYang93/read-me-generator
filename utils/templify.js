@@ -1,4 +1,6 @@
-class templify {
+//Instantiate a class called Templify
+
+class Templify {
   constructor(response) {
     this.title = response.title;
     this.description = response.description;
@@ -58,32 +60,24 @@ class templify {
   contentGen() {
     let readMeMainContentTemplate = `# ${this.title}
 ${this.licenseSection}
----
-## Description
-${this.description}
----
-${this.table}
----
-## Installation
-${this.installation}
----
-## Usage
-${this.usage}
----
-## Features
-${this.features}
----
-## How to Contribute
-${this.howToContribute}
----
-## Test
-${this.test}
----
-## Questions?
+## Description\n
+${this.description}\n
+${this.table}\n
+## Installation\n
+${this.installation}\n
+## Usage\n
+${this.usage}\n
+## Features\n
+${this.features}\n
+## How to Contribute\n
+${this.howToContribute}\n
+## Test\n
+${this.test}\n
+## Questions?\n
 For further questions or queries, please reach out to me at
 [${this.username}](mailto:${this.mail}?subject=Query%20regarding%20Project-${this.title})`;
     this.allIn = readMeMainContentTemplate;
   }
 }
 
-module.exports = templify;
+module.exports = Templify;

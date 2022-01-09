@@ -1,3 +1,5 @@
+// Generate an array of questions for the prompt lines
+
 const questions = [
   {
     type: "input",

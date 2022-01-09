@@ -1,3 +1,5 @@
+// Generate an array of license info
+
 const licenseBadgeArr = [
   {
     name: "",

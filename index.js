@@ -1,11 +1,10 @@
-// TODO: Include packages needed for this application
-const fs = require("fs");
-const i = require("inquirer"); // const generateMD = require("./utils/generateMarkdown");
-const questionArr = require("./utils/questions"); //Create an array of questions for user input
-const templify = require("./utils/templify");
-const licenseArr = require("./utils/licenseBadge");
+// Require packages needed for this application
+const fs = require("fs"); // file system
+const i = require("inquirer"); // inquirer
+const questionArr = require("./utils/questions"); //An array of questions for prompt lines
+const Templify = require("./utils/templify"); //Make readme template
+const licenseArr = require("./utils/licenseBadge"); //An array of license and information
 
-// update question with license list
 const updateQuestionArr = () => {
   let choiceArr = [];
   for (const { name } of licenseArr) {
@@ -13,14 +12,13 @@ const updateQuestionArr = () => {
   }
   questionArr[2].choices = choiceArr;
 };
-updateQuestionArr();
+updateQuestionArr(); // update question array with the latest license information
 
-// Create a function to initialize app
 async function init() {
   // Get user data
   let userData = "";
   await i.prompt(questionArr).then((r) => (userData = r));
-  let templateObj = new templify(userData);
+  let templateObj = new Templify(userData);
   templateObj.tableOfContentGen();
   templateObj.licenseGen(licenseArr);
   templateObj.contentGen();
@@ -29,5 +27,4 @@ async function init() {
   });
 }
 
-// Function call to initialize app
-init();
+init(); //Run app
