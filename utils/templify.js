@@ -1,85 +1,87 @@
 class templify {
-  constructor(
-    title,
-    description,
-    tableOfContent,
-    installation,
-    usage,
-    credit,
-    licenseBadge,
-    licenseLink,
-    features,
-    howToContribute,
-    test
-  ) {
-    this.title = title;
-    this.description = description;
-    this.tableOfContent = tableOfContent;
-    this.installation = installation;
-    this.usage = usage;
-    this.credit = credit;
-    this.licBadge = licenseBadge;
-    this.licLink = licenseLink;
-    this.features = features;
-    this.howToContribute = howToContribute;
-    this.test = test;
+  constructor(response) {
+    this.title = response.title;
+    this.description = response.description;
+    this.license = response.license;
+    //this.licenseSection
+    this.installation = response.installation;
+    this.usage = response.usage;
+    this.credit = response.credit;
+    this.features = response.features;
+    this.howToContribute = response.howToContribute;
+    this.test = response.test;
+    this.tableOfContent = response.tableOfContent;
+    this.username = response.username;
+    this.mail = response.mail;
   }
 
   tableOfContentGen() {
     let tableOfContent = "";
     if (this.tableOfContent) {
+      tableOfContent = "## Table of Content\n";
       if (this.installation !== "") {
-        tableOfContent += "- Installation /n";
+        tableOfContent += "- [Installation](## Installation)\n";
       }
       if (this.usage !== "") {
-        tableOfContent += "- Usage /n";
+        tableOfContent += "- [Usage](## Usage)\n";
       }
       if (this.credit !== "") {
-        tableOfContent += "- Credit /n";
-      }
-      if (this.license !== "") {
-        tableOfContent += "- License /n";
+        tableOfContent += "- [Credit](## Credit)\n";
       }
       if (this.features !== "") {
-        tableOfContent += "- Features /n";
+        tableOfContent += "- [Features](## Features)\n";
       }
       if (this.howToContribute !== "") {
-        tableOfContent += "- howToContribute /n";
+        tableOfContent += "- [Contribution](## How to Contribute)\n";
       }
       if (this.test !== "") {
-        tableOfContent += "- Test /n";
+        tableOfContent += "- [Test](## Test)\n";
       }
     }
     this.table = tableOfContent;
   }
 
-  licenseGen() {
-    let licenseSectionTemplate = `something something ${this.licBadge} and something something else ${this.licLink}`;
-    this.licenseSection = licenseSectionTemplate;
+  licenseGen(licenseArr) {
+    let licenseContent = "";
+    if (this.license) {
+      for (const singleLicInfo of licenseArr) {
+        if (singleLicInfo.name === this.license) {
+          licenseContent = `[![License](${singleLicInfo.badge})](${singleLicInfo.link})`;
+          break;
+        }
+      }
+    }
+
+    this.licenseSection = licenseContent;
   }
 
-  content() {
-    let readMeMainContentTemplate = `
-    # ${this.title}
-    # Description
-    ${this.description}
-    # Table of Content
-    ${this.table}
-    # Installation
-    ${this.installation}
-    # Usage
-    ${this.usage}
-    # Usage
-    ${this.credit}
-    # License
-    ${this.licenseSection}
-    # Features
-    ${this.features}
-    # How to Contribute
-    ${this.howToContribute}
-    # Test
-    ${this.test}
-    `;
+  contentGen() {
+    let readMeMainContentTemplate = `# ${this.title}
+${this.licenseSection}
+---
+## Description
+${this.description}
+---
+${this.table}
+---
+## Installation
+${this.installation}
+---
+## Usage
+${this.usage}
+---
+## Features
+${this.features}
+---
+## How to Contribute
+${this.howToContribute}
+---
+## Test
+${this.test}
+---
+## Questions?
+For further questions or queries, please reach out to me at
+[${this.username}](mailto:${this.mail}?subject=Query%20regarding%20Project-${this.title})`;
     this.allIn = readMeMainContentTemplate;
   }
 }

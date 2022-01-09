@@ -14,13 +14,7 @@ const questions = [
     type: "list",
     message: "Which \x1b[36mlicense \x1b[0mto use?",
     name: "license",
-    choices: [
-      "Apache 2.0 License",
-      "Boost Software License 1.0",
-      "BSD 3-Clause License",
-      "BSD 2-Clause License",
-      "Creative Commons CC0 1.0",
-    ],
+    choices: [],
   },
   {
     type: "input",
@@ -54,14 +48,19 @@ const questions = [
     name: "test",
   },
   {
-    type: "input",
-    message: "Is there any remaining \x1b[36mquestions\x1b[0m!",
-    name: "question",
-  },
-  {
     type: "confirm",
     message: "Do you want to create a \x1b[36mtable of content\x1b[0m?",
     name: "tableOfContent",
+  },
+  {
+    type: "input",
+    message: "What is your \x1b[36mGithub username\x1b[0m?",
+    name: "username",
+  },
+  {
+    type: "input",
+    message: "What is your \x1b[36mEmail address\x1b[0m?",
+    name: "mail",
   },
 ];
 
