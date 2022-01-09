@@ -22,23 +22,24 @@ class Templify {
     if (this.tableOfContent) {
       tableOfContent = "## Table of Content\n";
       if (this.installation !== "") {
-        tableOfContent += "- [Installation](## Installation)\n";
+        tableOfContent += "- [Installation](##Installation)\n";
       }
       if (this.usage !== "") {
-        tableOfContent += "- [Usage](## Usage)\n";
+        tableOfContent += "- [Usage](##Usage)\n";
       }
       if (this.credit !== "") {
-        tableOfContent += "- [Credit](## Credit)\n";
+        tableOfContent += "- [Credit](##Credit)\n";
       }
       if (this.features !== "") {
-        tableOfContent += "- [Features](## Features)\n";
+        tableOfContent += "- [Features](##Features)\n";
       }
       if (this.howToContribute !== "") {
-        tableOfContent += "- [Contribution](## How to Contribute)\n";
+        tableOfContent += "- [Contribution](##Contribute)\n";
       }
       if (this.test !== "") {
-        tableOfContent += "- [Test](## Test)\n";
+        tableOfContent += "- [Test](##Test)\n";
       }
+      tableOfContent += "- [Questions and Queries](##Questions)\n";
     }
     this.table = tableOfContent;
   }
@@ -58,22 +59,22 @@ class Templify {
   }
 
   contentGen() {
-    let readMeMainContentTemplate = `# ${this.title}
-${this.licenseSection}
-## Description\n
+    let readMeMainContentTemplate = `#${this.title}\n
+${this.licenseSection}\n
+##Description\n
 ${this.description}\n
 ${this.table}\n
-## Installation\n
+##Installation\n
 ${this.installation}\n
-## Usage\n
+##Usage\n
 ${this.usage}\n
-## Features\n
+##Features\n
 ${this.features}\n
-## How to Contribute\n
+##Contribute\n
 ${this.howToContribute}\n
-## Test\n
+##Test\n
 ${this.test}\n
-## Questions?\n
+##Questions\n
 For further questions or queries, please reach out to me at
 [${this.username}](mailto:${this.mail}?subject=Query%20regarding%20Project-${this.title})`;
     this.allIn = readMeMainContentTemplate;
