@@ -1,13 +1,12 @@
-# Title
+# A title
 
-[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
+[![License](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ## Description<div id="description" />
 
 description
 
 # Table of Content
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credit](#credit)
@@ -16,27 +15,28 @@ description
 - [Test](#test)
 - [Questions and Queries](#questions)
 
+
 ## Installation<div id="installation" />
 
-i
+Installation method
 
 ## Usage<div id="usage" />
 
-u
+Usage
 
 ## Features<div id="features" />
 
-f
+Features
 
 ## Contribute<div id="contribute" />
 
-mc
+addasad
 
 ## Test<div id="test" />
 
-t
+test
 
 ## Questions<div id="questions" />
 
 For further questions or queries, please reach out to me at
-[hy](mailto:hy@gmail.com?subject=Query%20regarding%20Project-Title)
+[heranyang93](mailto:yang.hrn@gmail.com?subject=Query%20regarding%20Project-A title)
